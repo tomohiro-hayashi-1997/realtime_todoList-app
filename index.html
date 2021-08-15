@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue.js ハンズオン</title>
+  <!-- 開発バージョン、便利なコンソールの警告が含まれています -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <div class="form">
+      <div>{{ inputText }}</div>
+      <input v-model="inputText" type="text">
+      <button @click="onAdd">追加</button>
+    </div>
+
+    <ul class="lists" v-if="lists.length">
+      <li v-for="(list, index) in lists">
+        <input type="checkbox" v-model="list.isDone">
+        <span>{{ index }} - {{ list.name }}</span>
+        <span v-if="list.isDone">（済）</span>
+        <button @click="onDelete(index)">削除</button>
+      </li>
+    </ul>
+    <div v-else>
+      なにもありません。
+    </div>
+
+    
+  </div>
+
+  
+  <script src="/js/main.js"></script>
+</body>
+</html>
