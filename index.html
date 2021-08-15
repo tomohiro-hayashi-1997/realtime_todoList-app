@@ -22,6 +22,16 @@
         <span>{{ index }} - {{ list.name }}</span>
         <span v-if="list.isDone">（済）</span>
         <button @click="onDelete(index)">削除</button>
+
+        <div id="timer">
+          <div class="timer">
+            <div class="time">
+              {{ formatTime }}
+            </div>
+            <button v-on:click="start" v-if="!timerOn">Start</button>
+            <button v-on:click="stop" v-if="timerOn">Stop</button>
+          </div>
+        </div> 
       </li>
     </ul>
     <div v-else>
@@ -32,6 +42,6 @@
   </div>
 
   
-  <script src="/js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
