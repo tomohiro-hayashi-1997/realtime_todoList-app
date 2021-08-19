@@ -1,4 +1,12 @@
-html, body {
+// style
+// HTML SCSS JSResult Skip Results Iframe
+// EDIT ON
+// *{box-sizing: border-box;}
+
+html, body{
+  // display: flex;
+  
+  // justify-content: center;
   position: relative;
   height: 100%;
   width: 100%;
@@ -6,7 +14,8 @@ html, body {
   font-family: 'Arial', sans-serif;
 }
 
-h1 {
+
+h1{
   margin-top: 24px;
   color: #fff;
   text-transform: uppercase;
@@ -14,13 +23,14 @@ h1 {
   font-size: 50px;
 }
 
-.form {
+
+.form{
   position: relative;
   width: 500px;
   margin: 0 auto;
 }
 
-.task-text {
+.task-text{
   position: absolute;
   top: 15px;
   left: 10px;
@@ -28,16 +38,17 @@ h1 {
   color: #a0a0a0;
   transition: all 0.25s ease;
   pointer-events: none;
+  
+  &.focus{
+    top: -25px;
+    left: 5px;
+    font-size: 14px;
+    color: #fff;
+  }
 }
 
-.task-text.focus {
-  top: -25px;
-  left: 5px;
-  font-size: 14px;
-  color: #fff;
-}
 
-#task {
+#task{
   position: relative;
   display: block;
   width: 500px;
@@ -51,11 +62,14 @@ h1 {
   background-color: #fff;
 }
 
+
+
 .btn,
 button.btn {
+
   font-weight: 700;
   position: relative;
-  display: inline-block;
+  display: inline-block; 
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -69,14 +83,15 @@ button.btn {
   letter-spacing: 0.1em;
   color: #266e50;
   background-color: #fff;
+  // background:rgba(51,112,121,0.4)
 }
 
 .btn-border-shadow--radius {
   border-radius: 100vh;
 }
-
 .btn-border-shadow {
   padding: calc(1.5rem - 12px) 3rem 1.5rem;
+
   background: #fff;
 }
 
@@ -84,11 +99,14 @@ button.btn {
   position: absolute;
   top: -6px;
   left: -6px;
+
   width: 100%;
   height: 100%;
+
   content: "";
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+
   border: 3px solid #266e50;
   border-radius: 0.5rem;
 }
@@ -106,10 +124,12 @@ button.btn {
   left: 0;
 }
 
-#addButton {
+#addButton{
   margin-top: 24px;
 }
 
-.buttonContent {
-  text-align: center;
+.buttonContent{
+  text-align:center;
 }
+
+

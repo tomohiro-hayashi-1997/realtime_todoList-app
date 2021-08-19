@@ -3,14 +3,17 @@ const app = new Vue({
   data() {
     return {
       inputText: '',
+      number:'',
       lists: [
         {
           name: 'ネギを買う',
+          time: '50',
           isDone: false
-        }
+        },
+        
       ],
-      min: 59,
-      sec: 59,
+      
+      sec: '',
       timerOn: false,
       timerObj: null,
     };
@@ -20,9 +23,12 @@ const app = new Vue({
       if (this.inputText) {
         this.lists.push({
           name: this.inputText,
+          time: this.number,
           isDone: false,
         });
+        this.sec = this.number; 
         this.inputText = '';
+        this.number = '';
       }
     },
     onDelete (index) {
@@ -30,15 +36,13 @@ const app = new Vue({
     },
     
     count: function() {
-      if (this.sec <= 0 && this.min >= 1) {
-        this.min --;
-        this.sec = 59;
-      } else if(this.sec <= 0 && this.min <= 0) {
+      if (this.sec <= 0) {
         this.complete();
-      } else {
+      }else {
         this.sec --;
       }
     },
+   
 
     start: function() {
       let self = this;
@@ -59,7 +63,6 @@ const app = new Vue({
   computed: {
     formatTime: function() {
       let timeStrings = [
-        this.min.toString(),
         this.sec.toString()
       ].map(function(str) {
         if (str.length < 2) {
@@ -68,7 +71,7 @@ const app = new Vue({
           return str
         }
       })
-      return timeStrings[0] + ":" + timeStrings[1]
+      return timeStrings[0] + "sec"
     }
   }
 });
