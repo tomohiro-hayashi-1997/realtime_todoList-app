@@ -30,24 +30,28 @@
 
     <ul class="lists" v-if="lists.length">
       <li v-for="(list, index) in lists" v-bind:key="lists.name">
-        <input type="checkbox" v-model="list.isDone">
-        <span>{{ index }} - {{ list.name }}</span>
+        <input type="checkbox" v-model="list.isDone" id="check">
+        
+          <span xlass="check-icon"></span>
+          <div class="task-box">{{ index }} - {{ list.name }}</divs>
+       
         <!-- <span>{{ list.time }}</span> -->
-        <span v-if="list.isDone">（済）</span>
-        <button @click="onDelete(index)">削除</button>
-
-        <div id="timer">
-          <div class="timer">
-            <div class="time" data-time="360">
-              <!-- {{ formatTime }} -->
+          <div id="timer">
+            <div class="timer">
+              <div class="time" data-time="1800">
+                <!-- {{ formatTime }} -->
+              </div>
             </div>
-          </div>
-        </div> 
+          </div> 
+        <div v-if="list.isDone" class="sumi">（済）</div>
+        <button @click="onDelete(index)"><div class="batsu">×</div></button>
+
+        
       </li>
     </ul>
 
     
-    <div v-else>
+    <div class="Nothing-div" v-else>
       なにもありません。
     </div>
     

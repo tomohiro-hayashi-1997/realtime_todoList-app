@@ -1,4 +1,5 @@
 html, body {
+  color: #fff;
   position: relative;
   height: 100%;
   width: 100%;
@@ -111,5 +112,58 @@ button.btn {
 }
 
 .buttonContent {
+  text-align: center;
+}
+
+.btn-margin-left {
+  margin-left: 16px;
+}
+
+.lists {
+  margin-top: 48px;
+  margin-left: 48px;
+  list-style: none;
+}
+
+.lists li {
+  display: flex;
+  color: #333;
+  border-left: solid 8px #f4a006;
+  background: rgba(244, 160, 6, 0.1);
+  margin-bottom: 5px;
+  padding: 0.5rem;
+}
+
+.task-box {
+  display: flex;
+  color: #fff;
+  align-items: center;
+}
+
+.sumi {
+  margin-left: 32px;
+}
+
+.batsu {
+  font-size: 200%;
+  font-weight: bold;
+  margin-left: 32px;
+}
+
+.time {
+  color: #fff;
+}
+
+.count {
+  margin-left: 24px;
+}
+
+.element {
+  display: flex;
+  align-items: center;
+}
+
+.Nothing-div {
+  margin-top: 48px;
   text-align: center;
 }

@@ -18,17 +18,17 @@ $('#addButton').click(function(){
     b.className = "count";
     a.append(b);
     b = document.createElement("button");
-    b.className = "start-btn";
+    b.className = "start-btn btn btn-border-shadow btn-border-shadow--radius btn-margin-left";
     b.textContent = "start";
     a.append(b);
     b = document.createElement("button");
-    b.className = "stop-btn";
+    b.className = "stop-btn btn btn-border-shadow btn-border-shadow--radius btn-margin-left";
     b.textContent = "stop";
     a.append(b);
-    b = document.createElement("button");
-    b.className = "reset-btn";
-    b.textContent = "reset";
-    a.append(b);
+    // b = document.createElement("button");
+    // b.className = "reset-btn btn btn-border-shadow btn-border-shadow--radius btn-margin-left";
+    // b.textContent = "reset";
+    // a.append(b);
     $(this).append(a);
   })
   $(".time").each(function(){
@@ -80,11 +80,11 @@ $('#addButton').click(function(){
     stop.on('click', () => {
       stopCount();
     });
-  　//ボタンを押したらカウントリセット
-    reset.on('click', () => {
-      stopCount();
-      timeLeft = poseTime = setTime;
-      displayText();
-    });
+  // 　//ボタンを押したらカウントリセット
+  //   reset.on('click', () => {
+  //     stopCount();
+  //     timeLeft = poseTime = setTime;
+  //     displayText();
+  //   });
   })
 });
